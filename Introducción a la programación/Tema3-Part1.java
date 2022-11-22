@@ -1,5 +1,4 @@
 public class TypeFucntion {
-
     public static void main(String[] args) {
         paramEx(10, 30, 5);
     }
