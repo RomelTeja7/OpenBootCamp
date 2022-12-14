@@ -1,43 +1,11 @@
-public class theme4Exercise {
+public class SmartDevice {
 
     public static void main(String[] args) {
 
-        SmartWatch watch = new SmartWatch();
-        SmartPhone phone = new SmartPhone();
-
-        //Modelo SmartWatch
-        watch.modelo = "Apple Watch";
-        watch.marca = "Apple";
-        watch.color = "Negro";
-        watch.precio = 699.95;
-        watch.sistema = "IOS";
-        watch.correaMaterial = "Cuero negro";
-        watch.sensores = "cardiaco, pasos";
-        System.out.println("SmartWatch" + "\n Modelo: " + watch.modelo
-                + "\n Marca: " + watch.marca
-                + "\n Color: " + watch.color
-                + "\n Precio: " + watch.precio
-                + "\n Sistema: " + watch.sistema
-                + "\n Correa Material: " + watch.correaMaterial
-                + "\n Sensores: " + watch.sensores);
-
-        //Modelo SmartPhone
-        phone.modelo = "Iphone 14";
-        phone.marca = "Apple";
-        phone.color = "Blanco";
-        phone.precio = 1199.99;
-        phone.sistema = "IOS";
-        phone.tamano = 7.0;
-        phone.camara = "40px";
-        phone.espacio = "128GB";
-        System.out.println("\nSmartPhone" + "\n Modelo: " + phone.modelo
-                + "\n Marca: " + phone.marca
-                + "\n Color: " + phone.color
-                + "\n Precio: " + phone.precio
-                + "\n Sistema: " + phone.sistema
-                + "\n Tamaño: " + phone.tamano
-                + "\n Camara: " + phone.camara
-                + "\n Espacio: " + phone.espacio);
+        SmartWatch watch2 = new SmartWatch("Apple Watch", "Apple", "Negro", 699.95, "IOS", "Cuero negro", "cardiaco, pasos");
+        SmartPhone phone2 = new SmartPhone("Iphone 14", "Apple", "Blanco", 1199.99, "IOS", 7.0, "40px", "128GB");
+        System.out.println(watch2);
+        System.out.println(phone2);
     }
 
     static class SmartWatch {
@@ -49,6 +17,11 @@ public class theme4Exercise {
         private String sistema;
         private String sensores;
         private String correaMaterial;
+
+        @Override
+        public String toString() {
+            return "SmartWatch{" + "modelo=" + modelo + ", marca=" + marca + ", color=" + color + ", precio=" + precio + ", sistema=" + sistema + ", sensores=" + sensores + ", correaMaterial=" + correaMaterial + '}';
+        }
 
         public SmartWatch() {
         }
@@ -88,6 +61,11 @@ public class theme4Exercise {
             this.tamano = tamano;
             this.camara = camara;
             this.espacio = espacio;
+        }
+
+        @Override
+        public String toString() {
+            return "SmartPhone{" + "modelo=" + modelo + ", marca=" + marca + ", color=" + color + ", precio=" + precio + ", sistema=" + sistema + ", tamano=" + tamano + ", camara=" + camara + ", espacio=" + espacio + '}';
         }
 
     }
